@@ -6,7 +6,24 @@
     </head>
     <body>
         <?php
-        echo "meep meep :>";
+        $name = 'Simon';
+        $what = 'geek';
+        $level = 9000;
+        echo 'Hi, my name is '.$name,'. and I am a level '.$level.' '.$what;
+        echo "<br />";
+        $hoursworked = $_GET['hours'];
+        $rate = 30;
+        if ($hoursworked > 40) {
+            $total = $hoursworked * $rate * 1.5;
+        } else {
+            $total = $hoursworked * $rate;
+        }
+        echo ($total > 0) ? 'You owe me '.$total : "You're welcome";
+        
+        $position = $_GET['board'];
+        $squares = str_split($position);
+        
+        
         ?>
     </body>
 </html>
